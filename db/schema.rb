@@ -42,7 +42,8 @@ ActiveRecord::Schema.define(version: 2021_05_30_011729) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.text "body"
+    t.string "avatar"
+    t.string "document"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
