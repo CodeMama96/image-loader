@@ -3,10 +3,16 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+  def new
+    
   end
 
+  def show
+    @user = User.find(user_params)
 
+  end
+
+private
   def user_params
     params.require(:user).permit(:name, :avatar, documents: [])
   end

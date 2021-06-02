@@ -36,7 +36,7 @@ google:
     type: "service_account"
     project_id: ""
     private_key_id: <%= Rails.application.credentials.dig(:gcs, :private_key_id) %>
-    private_key: <%= Rails.application.credentials.dig(:gcs, :private_key).dump %>
+   # private_key: <%= Rails.application.credentials.dig(:gcs, :private_key).dump %>
     client_email: ""
     client_id: ""
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
@@ -48,10 +48,10 @@ google:
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
-#   service: AzureStorage
-#   storage_account_name: your_account_name
-#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
-#   container: your_container_name
+  service: AzureStorage
+  storage_account_name: your_account_name
+  storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
+  container: your_container_name
 
 # mirror:
 #   service: Mirror
